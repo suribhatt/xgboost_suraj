@@ -49,28 +49,8 @@ def index():
     return render_template('results.html', prediction=prediction[0])
 
 
-# @app.route('/postman', methods=['POST', 'GET'])  # route to show the predictions in a web UI
-# def postm():
-#
-#     print(request.get_json(force=True))
-#     data= request.get_json(force=True)
-#     age = (data['age'])
-#     parch = (data['parch'])
-#     pclass = (data['pclass'])
-#     sibsp = (data['sibsp'])
-#     fare = (data['fare'])
-#     gender = (data['gender'])
-#     q = (data['q'])
-#     s = (data['s'])
-#
-#     filename = "titanic.sav"
-#     loaded_model = joblib.load(open(filename, 'rb'))  # loading the model file from the storage
-#     # predictions using the loaded model file
-#     prediction = loaded_model.predict([[pclass, age, sibsp, parch, fare, gender, q, s]])
-#     print('prediction is', prediction)
-#     prediction = round(100 * prediction[0])
-#     # showing the prediction results in a UI
-#     return jsonify({'Prediction': prediction})
+
+
 
 
 if __name__ == "__main__":
